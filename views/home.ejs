@@ -4,14 +4,24 @@
         <%=startingContent%>
     </p>
     <% posts.forEach(function(post){ %>
-        <h3><%= post.title %></h3>
-        <% if(post.content.length > 100) { %>
-           <% let postContent = post.content.substring(0,100); %>
-           <% postContent += "..."; %>
-           <p><%= postContent %><a href= "/posts/<%= post.title %>" target="blank">Read more</a>
-           </p>
+        <div class="post-head">
+            <h3 class="post-title">
+                <%= post.title %>
+            </h3>
+            <p class="post-time text-muted">
+                <%=post.timeAdded%>
+            </p>
+        </div>
+        <% if(post.content.length> 300) { %>
+            <% let postContent=post.content.substring(0,300); %>
+            <% postContent +="..." ; %>
+            <p>
+            <%= postContent %><a href="/posts/<%= post._id %>" target="blank">Read more</a>
+            </p>
         <% } else{ %>
-            <p><%= post.content %></p>
+            <p>
+            <%= post.content %>
+            </p>
         <% } %>
     <% }) %>
 <%- include("partials/footer"); -%>

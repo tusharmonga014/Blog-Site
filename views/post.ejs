@@ -1,6 +1,12 @@
 <%- include("partials/header"); -%>
-    <h1><%=post.title%></h1>
+    <div class="post-head">
+        <h1 class="post-title">
+            <%=post.title%>
+        </h1>
+        <p class="text-muted post-time">
+            <%=post.timeAdded%>< /p>
+    </div>
     <p>
         <%=post.content%>
     </p>
-<%- include("partials/footer"); -%>
+    <%- include("partials/footer"); -%>

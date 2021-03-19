@@ -3,6 +3,24 @@
     padding-bottom: 70px;
 }
 
+.post-head {
+    margin-top : 25px;
+    position: relative;
+}
+
+.post-title{
+    display: inline-block;
+    position : relative;
+    margin-top:0;
+}
+
+.post-time{
+    display: inline-block;
+    position: absolute;
+    right :10px;
+    bottom:-10px;
+}
+
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
