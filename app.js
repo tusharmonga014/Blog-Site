@@ -58,7 +58,7 @@ app.get("/compose", function (req, res) {
 app.post("/compose", function (req, res) {
 
   const dateTime = new Date();
-  const datetTimeString = + dateTime.getHours() + ":" + dateTime.getMinutes() + ":" + dateTime.getSeconds() + dateTime.getDate() + "/" + (dateTime.getMonth() + 1) + "/" + dateTime.getFullYear() + " (IST)";
+  const datetTimeString = dateTime.getHours() + ":" + dateTime.getMinutes() + ":" + dateTime.getSeconds() + " " + dateTime.getDate() + "/" + (dateTime.getMonth() + 1) + "/" + dateTime.getFullYear() + " (IST)";
 
   const post = new Post({
     title: req.body.postTitle,

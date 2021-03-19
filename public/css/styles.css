@@ -1,12 +1,16 @@
-.header{
+.header {
     position: fixed;
-    top :0;
-    width :100%;
+    top: 0;
+    width: 100%;
     z-index: 1;
 }
 
-.page-content{
-    margin-top : 90px;
+.container {
+    padding: 0 5%;
+}
+
+.page-content {
+    padding: 7% 5%;
 }
 
 .container-fluid {
@@ -15,12 +19,12 @@
 }
 
 .post-head {
-    margin-top : 25px;
+    margin-top: 40px;
     position: relative;
 }
 
-.post-space{
-    margin : 50px 0 25px 0;
+.post-space {
+    margin: 50px 0 25px 0;
     position: relative;
 }
 
@@ -34,7 +38,7 @@
     display: inline-block;
     position: absolute;
     right: 10px;
-    bottom: -10px;
+    bottom: 0;
 }
 
 .navbar {
@@ -45,6 +49,11 @@
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 4px;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    font-size: 3rem;
 }
 
 .navbar-nav li a:hover {
