@@ -72,7 +72,11 @@ app.post("/compose", function (req, res) {
 
 app.get("/posts/:postId", function (req, res) {
   const postId = req.params.postId;
-  Post.findById({ postId }, function (err, post) {
+  Post.findById(postId, function (err, post) {
+    if (err)
+      console.log(err);
+    else
+      console.log(post);
     res.render("post", { post: post });
   })
 })
