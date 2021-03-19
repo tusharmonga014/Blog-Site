@@ -41,6 +41,10 @@
     bottom: 0;
 }
 
+.limit-reached {
+    color: red;
+}
+
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
