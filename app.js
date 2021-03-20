@@ -76,8 +76,7 @@ app.get("/posts/:postId", function (req, res) {
     if (err)
       console.log(err);
     else
-      console.log(post);
-    res.render("post", { post: post });
+      res.render("post", { post: post });
   })
 })
 

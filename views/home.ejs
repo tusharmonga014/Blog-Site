@@ -16,7 +16,7 @@
             <% let postContent=post.content.substring(0,300); %>
             <% postContent +="..." ; %>
             <p>
-            <%= postContent %><a href="/posts/<%= post._id%>" target="blank">Read more</a>
+            <%= postContent %><a href="/posts/<%=post._id%>" target="blank">Read more</a>
             </p>
         <% } else{ %>
             <p>
