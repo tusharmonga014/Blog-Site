@@ -1,4 +1,4 @@
-document.getElementById("inputText").addEventListener("keyup", function () {
+document.getElementById("inputText").addEventListener("keydown", function () {
     let data = document.getElementById("inputText").value;
     document.getElementsByClassName("limit")[0].innerHTML = " &nbsp;&nbsp;(" + (700 - data.length) + " characters)";
     if (data.length > 700) {
