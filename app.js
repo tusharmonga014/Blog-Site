@@ -78,7 +78,7 @@ app.get("/posts/:postId", function (req, res) {
   //   else
   //     res.render("post", { post: post });
   // })
-  Post.deleteOne({ id: postId }, function (err) {
+  Post.deleteOne({ _id: postId }, function (err) {
     console.log("deleted");
   })
   res.redirect("/home");
