@@ -81,6 +81,7 @@ app.get("/posts/:postId", function (req, res) {
   Post.deleteOne({ id: postId }, function (err) {
     console.log("deleted");
   })
+  res.redirect("/home");
 })
 
 app.get("*", function (req, res) {
