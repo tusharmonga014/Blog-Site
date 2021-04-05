@@ -72,16 +72,12 @@ app.post("/compose", function (req, res) {
 
 app.get("/posts/:postId", function (req, res) {
   const postId = req.params.postId;
-  // Post.findById(postId, function (err, post) {
-  //   if (err)
-  //     console.log(err);
-  //   else
-  //     res.render("post", { post: post });
-  // })
-  Post.deleteOne({ _id: postId }, function (err) {
-    console.log("deleted");
+  Post.findById(postId, function (err, post) {
+    if (err)
+      console.log(err);
+    else
+      res.render("post", { post: post });
   })
-  res.redirect("/home");
 })
 
 app.get("*", function (req, res) {
