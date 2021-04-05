@@ -72,11 +72,14 @@ app.post("/compose", function (req, res) {
 
 app.get("/posts/:postId", function (req, res) {
   const postId = req.params.postId;
-  Post.findById(postId, function (err, post) {
-    if (err)
-      console.log(err);
-    else
-      res.render("post", { post: post });
+  // Post.findById(postId, function (err, post) {
+  //   if (err)
+  //     console.log(err);
+  //   else
+  //     res.render("post", { post: post });
+  // })
+  Post.deleteOne({ id: postId }, function (err) {
+    console.log("deleted");
   })
 })
 
@@ -84,10 +87,9 @@ app.get("*", function (req, res) {
   res.render("error");
 })
 
-let port=process.env.PORT;
-if(port==null || port=="")
-{
-  port=3000;
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
 }
 
 app.listen(port, function () {
