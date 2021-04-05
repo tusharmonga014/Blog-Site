@@ -5,9 +5,9 @@
     </p>
     <% posts.forEach(function(post){ %>
         <div class="post-head">
-            <h3 class="post-title">
+            <a href="/posts/<%=post._id%>"><h3 class="post-title">
                 <%= post.title %>
-            </h3>
+            </h3></a>
             <p class="post-time text-muted">
                 <%=post.timeAdded%>
             </p>
